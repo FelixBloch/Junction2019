@@ -7,7 +7,7 @@ from flask import session
 app_id="Wze2UHyOGN8z12BqLmPb"
 app_code="vdNH_YG6zsIrMjogrUzRgw"
 mode="fastest;car;traffic:enabled;"
-alternatives="3"
+alternatives="2"
 routeAttributes="sh,-wp"
 legAttributes="links,-maneuvers"
 linkAttributes="sh,le,sl,ds,ro,ma,fc"
