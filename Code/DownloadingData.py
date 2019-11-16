@@ -1,18 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[20]:
-
-
 import pandas as pd
 import numpy as np
 from fake_useragent import UserAgent
 import requests
 import pyprind
-
-
-# In[22]:
-
 
 def getRequest(table='baggage', key='jmdSHjy6WPaXwoR75E6mJ1ImhxKPRJb51v6DBS0A',
                url="https://junction.dev.qoco.fi/api/", baggageId=''):
@@ -24,10 +14,6 @@ def getRequest(table='baggage', key='jmdSHjy6WPaXwoR75E6mJ1ImhxKPRJb51v6DBS0A',
     response = pd.DataFrame.from_dict(response[list(response.keys())[0]])
     
     return response
-
-
-# In[35]:
-
 
 def combineDataBases():
 
@@ -55,46 +41,7 @@ def combineDataBases():
 
     return events_baggage_customer
 
-
-# In[36]:
-
-
 travels = combineDataBases()
 travels.to_csv('travels.csv', index=False)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
 
 
