@@ -38,10 +38,10 @@ def combineDataBases():
     events_baggage_customer = pd.merge(events, baggage_customer, how='inner', on='baggageId')
     display(events_baggage_customer.info())
     display(events_baggage_customer.head())
+    
+    return events_baggage_customer, events, customers, baggage
 
-    return events_baggage_customer
-
-travels = combineDataBases()
+travels, events, customers, baggage = combineDataBases()
 travels.to_csv('travels.csv', index=False)
 
 
