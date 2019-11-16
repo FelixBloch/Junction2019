@@ -39,14 +39,14 @@ def combineDataBases():
     display(events_baggage_customer.info())
     display(events_baggage_customer.head())
     
-    return events_baggage_customer, events, customers, baggage
+    return events_baggage_customer, baggage_customer, events, customers, baggage
 
-travels, events, customers, baggage = combineDataBases()
+travels, baggage_customer, events, customers, baggage = combineDataBases()
 travels.to_csv('travels.csv', index=False)
+baggage_customer.to_csv('baggage_customer.csv', index=False)
 events.to_csv('events.csv', index=False)
 customers.to_csv('customers.csv', index=False)
 baggage.to_csv('baggage.csv', index=False)
-
 
 
 
