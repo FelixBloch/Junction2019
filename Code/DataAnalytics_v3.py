@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import pandas as pd
 import numpy as np
 from fake_useragent import UserAgent
@@ -11,9 +5,6 @@ import requests
 import pyprind
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-
-# In[2]:
 
 
 def getRequest(table='baggage', key='jmdSHjy6WPaXwoR75E6mJ1ImhxKPRJb51v6DBS0A',
@@ -27,8 +18,6 @@ def getRequest(table='baggage', key='jmdSHjy6WPaXwoR75E6mJ1ImhxKPRJb51v6DBS0A',
     
     return response
 
-
-# In[3]:
 
 
 def combineDataBases():
@@ -72,8 +61,6 @@ events.to_csv('events.csv', index=False)
 customers.to_csv('customers.csv', index=False)
 baggage.to_csv('baggage.csv', index=False)
 
-
-# In[5]:
 
 
 missed = events.groupby(['baggageId']).apply(lambda x: x.type.unique()[-1]).rename('status')
@@ -132,52 +119,5 @@ df2 = baggage_customer_a.groupby(['origin_airport','status'])['origin_airport'].
 plt.xlabel('Destination airport')
 plt.tight_layout()
 plt.savefig('DataAnalytics.png')
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
 
 
