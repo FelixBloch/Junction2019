@@ -43,5 +43,10 @@ def combineDataBases():
 
 travels, events, customers, baggage = combineDataBases()
 travels.to_csv('travels.csv', index=False)
+events.to_csv('events.csv', index=False)
+customers.to_csv('customers.csv', index=False)
+baggage.to_csv('baggage.csv', index=False)
+
+
 
 
