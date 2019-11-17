@@ -1,22 +1,293 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+	height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #09d3ac;
+	color: #09d3ac;
+}
+
+* {
+	font-family: amplitude, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+ul li {
+	display: inline;
+}
+
+p {
+	margin: 0px;
+}
+
+/* Clearfix */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+
+/* Rows and Columns */
+.row {
+	width: 100%;
+	float: left;
+}
+.row2 {
+	width: 50%;
+	float: left;
+}
+
+.column-100 {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 15px;
+	float: left;
+}
+
+.column-50 {
+	box-sizing: border-box;
+	width: 50%;
+	padding: 16px;
+	float: left;
+}
+
+/* Header */
+.header-1 {
+	margin-top: 15px;
+	max-width: 980px;
+	min-width: 860px;
+	margin: 0 auto;
+	font-family: amplitude, sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	color: #737373;
+}
+
+.header-2 {
+	max-width: 980px;
+	min-width: 860px;
+	margin: 0 auto;
+}
+
+.top-nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-nav li {
+	padding: 15px 2px 15px 2px;
+	border-left: 1px solid white;
+}
+
+.main-nav li a {
+	font-size: 14px;
+	font-weight: 400;
+	color: white;
+	text-align: center;
+	padding: 20px 30px 20px 30px;
+}
+
+.header-note {
+	background-color: #f5f0f1;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.header-note a {
+	font-family: amplitude;
+	font-weight: 800;
+	text-decoration: underline;
+	font-size: 12px;
+	color: #a53f8c;
+	padding: 20px 0px 20px 0px;
+}
+
+/* Nav Images */
+.nav-icon {
+	width: 30px;
+	display: inline;
+}
+
+
+/* Container */
+.container {
+	max-width: 980px;
+	min-width: 860px;
+	margin: 0 auto;
+}
+
+.main-nav-options {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+/* Tabs/main options */
+.main-nav-options a {
+	font-family: amplitude;
+	font-size: 16px;
+	font-weight: 700;
+	color: #737373;
+	background-color: #ececec;
+	padding: 15px 100px 15px 100px;
+	border-top: 1px solid grey;
+	border-left: 1px solid grey;
+	border-right: 1px solid grey;
+}
+
+.bordered {
+	border: 1px solid grey;
+}
+
+.book-flights-option {
+	max-width: 980px;
+	min-width: 860px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	border: 1px solid grey;
+}
+
+.path-options li {
+	padding-right: 10px;
+}
+
+.airport-field {
+	font-family: amplitude;
+	font-size: 20px;
+	font-weight: 700;
+	color: #737373;
+	padding: 20px 64px 20px 64px;
+}
+
+.passenger-text {
+	font-family: amplitude, "Amplitude Bold", Helvetica, Arial, Verdana, Georgia;
+	font-weight: 700;
+	font-size: 16px;
+	color: #0d1973;
+	margin-left: 8px;
+}
+
+.find-flights-button {
+	display: block;
+	font-family: amplitude, "Amplitude Bold", Helvetica, Arial, Verdana, Georgia;
+	font-weight: 900;
+	font-size: 18px;
+	color: white;
+	text-align: center;
+	width: 100%;
+	background-color: #737373;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-radius: 3px;
+	box-shadow: 3px 3px 6px black;
+}
+
+.blue-berry-heading {
+	font-size: 55px;
+	color: #0d1973;
+	font-weight: 700px;
+	font-family: amplitude, "Amplitude Bold", Helvetica, Arial, Verdana, Georgia;
+	letter-spacing: -.02em;
+}
+
+.blue-button {
+	display: block;
+	float: left;
+	clear: both;
+	background: #0d1973;
+	color: #fff !important;
+	line-height: 1;
+	border: 0;
+	font-size: 1.23077em;
+	outline: transparent solid 1px;
+	padding: 1em;
+	transition: all .2s ease-out;
+	border-radius: 2px;
+	font-family: "Amplitude book", Helvetica, Arial, sans-serif;
+	letter-spacing: .5px;
+}
+
+.blue-deal {
+	float: right;
+	border-top: 1px solid black;
+	display: block;
+	margin-top: 75px;
+}
+
+.blue-deal h3 {
+	font-size: 2rem;
+	color: #0d1973;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+.blue-deal p {
+	width: 50%;
+	display: inline-block;
+	font-size: 12px;
+	color: grey;
+}
+
+.blue-deal h4 {
+	width: 40%;
+	display: inline-block;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	font-size: 36px;
+	font-weight: 900;
+	color: #ba4a9e;
+}
+
+.main-icon-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-icon-list li {
+	background-color: #f2f5f8;
+	padding: 5px 8px 5px 8px;
+	text-align: center;
+	margin-left: 10px;
+}
+
+.main-icon-list li a img {
+	display: block;
+	margin: 0 auto;
+	width: 60px;
+}
+
+.main-icon-list li a a {
+	font-size: 12px;
+	font-weight: 400;
+	color: grey;
 }
