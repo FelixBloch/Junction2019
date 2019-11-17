@@ -17,7 +17,9 @@ class LuggageInfo extends Component {
               <div className="column-50">
                 <p>REF: 56F6D</p>
                 <p>FLIGHT: AY5678</p>
-                <p>DATE: 21.11.2019</p>
+                <p>DATE: 20.11.2019</p>
+                <p>DROP OFF TIME: 09:05</p>
+                <p>DEPARTURE TIME: 19:05</p>
                 <p>ORIGIN: Helsinki-Vantaa Airport</p>
                 <p>DESTINATION: Munich International Airport</p>
                 <p>PICTURE:</p>

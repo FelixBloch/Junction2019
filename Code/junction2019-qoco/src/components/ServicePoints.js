@@ -5,8 +5,8 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 const mapStyles = {
   position: 'relative',
-  width: '72.5%',
-  height: '75%'
+  width: '72.6%',
+  height: '95%'
 };
 
 export class ServicePoints extends Component {
@@ -24,22 +24,23 @@ export class ServicePoints extends Component {
     this.state = {
       stores: [
         { lat: 60.1699, lng: 24.9384 },
-        { latitude: 60.171231, longitude: 24.941445 }, //
-        { latitude: 60.198854, longitude: 24.933297 }, //
-        { latitude: 60.251319, longitude: 25.011208 }, //
-        { latitude: 60.169461, longitude: 24.933939 }, //
-        { latitude: 60.185119, longitude: 24.823014 }, //
-        { latitude: 60.164612, longitude: 24.928973 }, //Abrahaminkatu 6-4, 00180 Helsinki
-        { latitude: 60.172194, longitude: 24.957422 }, //Vironkatu 4, 00170 Helsinki
-        { latitude: 60.19075, longitude: 24.951674 }, //Aleksis Kiven katu 11-15
-        { latitude: 60.213181, longitude: 24.946905 }, //Osmontie 23, 00610 Helsinki
-        { latitude: 60.255721, longitude: 24.931231 }, //Kuusmiehentie 38-34, Helsinki
-        { latitude: 60.316415, longitude: 60.316415 }, //Airport
-        { latitude: 60.218711, longitude: 24.868416 }, //Strömbergintie 5, 00380 Helsinki
-        { latitude: 60.206811, longitude: 24.821241 }, //Ruukinrannantie 10, 02600 Espoo
-        { latitude: 60.196301, longitude: 25.06079 }, //Herttoniemi, 00820 Helsinki
-        { latitude: 60.258852, longitude: 25.011701 }, //Vainiotie 1-3, 00700 Helsinki
-        { latitude: 60.233146, longitude: 25.114725 }, //Länsimäentie 00970 Helsinki
+        { latitude: 60.1699, longitude: 24.9384, txt: '' },
+        { latitude: 60.171231, longitude: 24.941445, txt: '' }, //
+        { latitude: 60.198854, longitude: 24.933297, txt: '' }, //
+        { latitude: 60.251319, longitude: 25.011208, txt: '' }, //
+        { latitude: 60.169461, longitude: 24.933939, txt: '' }, //
+        { latitude: 60.185119, longitude: 24.823014, txt: 'Your location' }, //
+        { latitude: 60.164612, longitude: 24.928973, txt: 'Abrahaminkatu 6-4, 00180 Helsinki' }, //Abrahaminkatu 6-4, 00180 Helsinki
+        { latitude: 60.172194, longitude: 24.957422, txt: 'Vironkatu 4, 00170 Helsinki' }, //Vironkatu 4, 00170 Helsinki
+        { latitude: 60.19075, longitude: 24.951674, txt: '' }, //Aleksis Kiven katu 11-15
+        { latitude: 60.213181, longitude: 24.946905, txt: '' }, //Osmontie 23, 00610 Helsinki
+        { latitude: 60.255721, longitude: 24.931231, txt: '' }, //Kuusmiehentie 38-34, Helsinki
+        { latitude: 60.316415, longitude: 60.316415, txt: '' }, //Airport
+        { latitude: 60.218711, longitude: 24.868416, txt: '' }, //Strömbergintie 5, 00380 Helsinki
+        { latitude: 60.206811, longitude: 24.821241, txt: '' }, //Ruukinrannantie 10, 02600 Espoo
+        { latitude: 60.196301, longitude: 25.06079, txt: '' }, //Herttoniemi, 00820 Helsinki
+        { latitude: 60.258852, longitude: 25.011701, txt: '' }, //Vainiotie 1-3, 00700 Helsinki
+        { latitude: 60.233146, longitude: 25.114725, txt: '' }, //Länsimäentie 00970 Helsinki
       ]
     }
   }
@@ -48,7 +49,9 @@ export class ServicePoints extends Component {
     return this.state.stores.map((store, index) => {
       return <Marker key={index} id={index} position={{
         lat: store.latitude,
-        lng: store.longitude
+        lng: store.longitude,
+        title: store.txt,
+        label: { color: '#00aaff', fontWeight: 'bold', fontSize: '14px', text: store.txt },
       }}
         onClick={() => console.log("You clicked me!")} />
     })
@@ -163,37 +166,16 @@ export class ServicePoints extends Component {
               <a style={{ backgroundColor: '#ffffff', borderBottomColor: '#ffffff', zIndex: 3 }} href="#">FIND CLOSEST BAGGAGE DROP</a>
             </div>
           </div>
-          <div className="book-flights-option clearfix" style={{ height: "1000px" }}>
+          <div className="book-flights-option clearfix" style={{ height: "579px" }}>
             <div>
               <Map
                 google={this.props.google}
                 zoom={14}
                 style={mapStyles}
-                initialCenter={{ lat: 60.1699, lng: 24.9384 }}
+                initialCenter={{ lat: 60.1857079, lng: 24.824989499999997 }}
               >
                 {this.displayMarkers()}
               </Map>
-            </div>
-            <div className="row">
-              <div className="column-50">
-                <p className="passenger-text">ENTER A LOCATION</p>
-              </div>
-            </div>
-            <div className="row">
-
-            </div>
-            <div className="row">
-              <div className="column-50">
-                <input type="checkbox" name="finnait-plus" />
-                <label htmlFor="finnait-plus">USE CURRENT LOCATION</label>
-              </div>
-            </div>
-            <div className="row">
-              <div className="column-100">
-                <button className="find-flights-button">
-                  <p>FIND CLOSEST PICKUP POINT</p>
-                </button>
-              </div>
             </div>
             <div className="row">
               <div className="column-100">
