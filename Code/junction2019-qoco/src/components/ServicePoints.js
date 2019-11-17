@@ -241,5 +241,5 @@ export class ServicePoints extends Component {
 // export default ServicePoints;
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCNr8r-DGOr1NAsSSywe2QUuEBXQ9ktZB8'
+  apiKey: 'YOUR API KEY HERE'
 })(ServicePoints);
