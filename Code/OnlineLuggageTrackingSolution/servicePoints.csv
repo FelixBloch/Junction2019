@@ -1,0 +1,16 @@
+place,lat,lon,route
+"Abrahaminkatu 6-4, 00180 Helsinki",60.164612,24.928973,1
+"Vironkatu 4, 00170 Helsinki",60.172194,24.957422,1
+Aleksis Kiven katu 11-15,60.19075,24.951674,1
+"Osmontie 23, 00610 Helsinki",60.213181,24.946905,1
+"Kuusmiehentie 38-34, Helsinki",60.255721,24.931231,1
+Airport,60.316415,24.964692,1
+"Espoo, 02120 Espoo",60.176686,24.791745,2
+"Ruukinrannantie 10, 02600 Espoo",60.206811,24.821241,2
+"Strömbergintie 5, 00380 Helsinki",60.218711,24.868416,2
+"Vantaa, 01600 Vantaa",60.26578,24.842648,2
+Airport,60.316415,24.964692,2
+"Herttoniemi, 00820 Helsinki",60.196301,25.06079,3
+Länsimäentie 00970 Helsinki,60.233146,25.114725,3
+"Vainiotie 1-3, 00700 Helsinki",60.258852,25.011701,3
+Airport,60.316415,24.964692,3
